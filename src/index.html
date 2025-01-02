@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focuso</title>
+</head>
+<body>
+   <div class="sidebar">
+    <div class="user-container">
+        <div class="user-icon">
+            <i class="icon-user-circle-o"></i>
+
+        </div>
+        <div class="user-details">
+            <h2>New User</h2>
+            <p>1 Task Remaining</p>
+
+        </div>
+
+    </div>
+    
+    <div class="search-bar">
+        <i class="icon-search"></i>
+        <input type="text" placeholder="search" name="search">
+
+
+    </div>
+
+    <div class="nav-list">
+        <ul class="menu-list">
+            <li id="addTask"><i class="icon-plus-circled"></i>Add Task </li>
+            <li><i class="icon-install"></i>All</li>
+            <li><i class="icon-attach"></i>Today</li>
+            <li><i class="icon-calendar"></i>Scheduled</li>
+            <li><i class="icon-ok-circled"></i>Completed</li>
+        </ul>
+    </div>
+    <div class="projects-nav">
+        <h3>Projects<i class="icon-star"></i></h3>
+        <ul class="project-list">
+            <li><i class="icon-plus"></i>Add project</li>
+            <li><i class="icon-folder"></i>Work</li>
+            <li><i class="icon-folder"></i>Others</li>
+        </ul>
+    </div>
+    
+   </div>
+
+   <main>
+    <div class="modal-container ">
+        <div class="add-task">
+           <button class="close-btn">X</button>
+            <h2>Add Task</h2>
+            <form action="">
+        <input type="text" placeholder="Title" name="title" required>
+        <textarea id="description" placeholder="Description" name="description" required rows="5" cols="30"></textarea>
+        
+        
+        <select name="category" id="category" required>
+            <option value="Work">Work</option>
+            <option value="Study">Study</option>
+        </select>
+        
+        
+        <input type="date" name="due_date" id="due_date" required>
+        
+       
+        <select name="priority" id="priority" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        
+        <button type="submit" class="add-task-modal-btn">Add Task</button>
+    </form>
+    
+        </div>
+    </div>
+    <div class="task-card">
+        <div class="card-header">
+            <h2>Title</h2>
+            <div class="task-menu-container">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+        <div class="card-details">
+            <h2 class="project-name">Project : Office Works </h2>
+            <p class="description">Description: This is a demo task which contains tasks from odin project.</p>
+        </div>
+        <div class="card-footer">
+            <p class="priority">Medium</p>
+            <p class="date">12-11-1997</p>
+        </div>
+    </div>
+    <div class="task-card">
+        <div class="card-header">
+            <h2>Title</h2>
+            <div class="task-menu-container">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+        <div class="card-details">
+            <h2 class="project-name">Project : Office Works </h2>
+            <p class="description">Description: This is a demo task which contains tasks from odin project.</p>
+        </div>
+        <div class="card-footer">
+            <p class="priority">Medium</p>
+            <p class="date">12-11-1997</p>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <div class="card-header">
+            <h2>Title</h2>
+            <div class="task-menu-container">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+        <div class="card-details">
+            <h2 class="project-name">Project : Office Works </h2>
+            <p class="description">Description: This is a demo task which contains tasks from odin project.</p>
+        </div>
+        <div class="card-footer">
+            <p class="priority">Medium</p>
+            <p class="date">12-11-1997</p>
+        </div>
+    </div>
+    <div class="task-card">
+        <div class="card-header">
+            <h2>Title</h2>
+            <div class="task-menu-container">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+        <div class="card-details">
+            <h2 class="project-name">Project : Office Works </h2>
+            <p class="description">Description: This is a demo task which contains tasks from odin project.</p>
+        </div>
+        <div class="card-footer">
+            <p class="priority">Medium</p>
+            <p class="date">12-11-1997</p>
+        </div>
+    </div>
+
+   </main>
+</body>
+</html>

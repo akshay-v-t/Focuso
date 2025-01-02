@@ -1,0 +1,282 @@
+@import './fontello/css/fontello.css';
+
+*{
+  background-color: #ffff;
+  font-family: "Inter", Arial;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  
+}
+
+body{
+  display: flex;
+}
+
+.sidebar{
+  border-right: 1px solid #bebebe;
+  min-height: 100vh;
+  min-width: 20%;
+  padding: 20px;
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+.user-container{
+  
+ display: flex;
+ align-items: center;
+  padding: 20px 0px;
+  gap: 8px;
+}
+
+.user-container i {
+  font-size: 36px;
+}
+
+.user-details h2{
+  font-size: 14px;
+  font-weight: 700;
+}
+.user-details{
+  display: flex;
+  flex-direction: column;
+  gap:2px;
+}
+
+.search-bar{
+  padding: 20px;
+
+}
+
+.search-bar {
+  padding:2px;
+ 
+  background-color: rgb(234, 234, 234);
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  
+}
+
+.search-bar input{
+  padding:10px;
+  border: none;
+  background-color: rgb(234, 234, 234);
+  width: 100%;
+  outline: none;
+}
+
+.menu-list, .project-list{
+  list-style-type: none;
+  gap: 20px;
+  
+}
+
+.menu-list li, .project-list li{
+  margin: 4px 0px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: #424242;
+}
+
+.menu-list li:hover, .project-list li:hover{
+ font-weight: 500;
+ color: #4a66e2;
+ transition: 0.3s ease-in-out;
+
+ background-color: rgb(243, 243, 243);
+ border-radius: 12px;
+}
+
+.menu-list i, .project-list i{
+  margin-right: 6px;
+}
+
+.nav-list, .projects-nav{
+  padding: 20px;
+}
+
+.task-card{
+  
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #00000022;
+  box-shadow: 2px 2px 12px rgba(177, 177, 177, 0.1);
+  
+}
+
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card-details{
+  padding: 10px;
+}
+
+.card-footer{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.card-footer .date{
+  background-color: #eeeeee;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.card-footer .priority{
+  background-color: #ff9900;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #fff;
+  
+  
+}
+
+.card-details{
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header h2{
+  font-size: 18px;
+}
+
+.card-header button{
+  padding: 3px 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.card-header button:nth-child(2){
+  background-color: #4a66e2;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr auto;
+  gap: 20px;
+
+  padding: 20px;
+  font-weight: 400;
+  color: #424242;
+}
+button{
+  cursor: pointer;
+  padding: 10px 20px;
+
+  border-radius: 4px;
+}
+
+.add-task button{
+  width: 100%;
+  background-color: #4a66e2;
+  color: #fff;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+
+.add-task button:hover{
+  background-color: #23347e;
+
+}
+.add-task {
+  border: 2px solid #222;
+  border-radius: 4px;
+  padding: 20px;
+  position: relative;
+}
+.add-task form{
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 20px;
+  align-items: center;
+  justify-content:stretch;
+  gap:20px
+  
+}
+
+input, select, textarea{
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  
+  border-radius: 4px;
+  width: 100%;
+}
+
+select option{
+  padding: 20px;
+}
+
+.add-task h2{
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.modal-container{
+  
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  transition: opacity 0.3s ease, visibility 0s 0.2s; 
+}
+.modal-container.open {
+  opacity: 1; 
+  visibility: visible; 
+  pointer-events: all; 
+  transition: opacity 0.2s ease, visibility 0s 0s; 
+}
+
+.add-task .close-btn{
+ 
+ 
+ font-size: 18px;
+ transform: scaleX(1.4) ;
+ font-weight: 500;
+
+ color: #222;
+
+ position: absolute;
+
+right: 0;
+top: 0;
+
+ background-color: transparent;
+ width: fit-content;
+
+
+}
+
+.add-task .close-btn:hover{
+  color:#23347e;
+  background-color: transparent;
+}
